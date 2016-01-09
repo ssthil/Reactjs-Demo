@@ -16,31 +16,26 @@
 	//page title creation
 	var PageTitle = React.createClass({
 		render: function () {
-			
 			return (
 				<div className="page-header">
-					  <h1>Data Collections</h1>
+					 <h1>Data Collections</h1>
 				</div>
 			);
-
 		}
 	});
 	//table title creation
 	var TableTitle = React.createClass({
 		render:function(){
-
 			return (
-					<div className="panel-heading">
-						<h4 >My Family Information</h4>
-					</div>
-				);
-
+				<div className="panel-heading">
+					<h4 >My Family Information</h4>
+				</div>
+			);
 		}
 	});
 	//table header creation
 	var TableHeader = React.createClass({
 		render: function(){
-
 			return(
 				<thead>
 					<tr>	
@@ -52,36 +47,30 @@
 						<th>Country</th>
 					</tr>
 				</thead>
-				);
-
+			);
 		}
 	});
 	//table row creation
 	var DataRow = React.createClass({
-		
 		maybeRenderPerson: function() {
-	    	
 	    	if(this.props.member.country == "india"){
 	    		return <img src="img/india_flag.png"/>;
 	    	} else {
 	    		return <img src="img/singapore_flag.png"/>
-	    	}
-	        	
+	    	}	
 		},
 
 		render: function(){
-
 			return (
-					<tr>
-						<td>{this.props.member.name}</td>
-						<td>{this.props.member.title}</td>
-						<td>{this.props.member.age}</td>
-						<td>{this.props.member.job}</td>
-						<td>{this.props.member.country}</td>
-						<td>{this.maybeRenderPerson()}</td>
-					</tr>
-				);
-
+				<tr>
+					<td>{this.props.member.name}</td>
+					<td>{this.props.member.title}</td>
+					<td>{this.props.member.age}</td>
+					<td>{this.props.member.job}</td>
+					<td>{this.props.member.country}</td>
+					<td>{this.maybeRenderPerson()}</td>
+				</tr>
+			);
 		}
 	});
 	//main table creation
